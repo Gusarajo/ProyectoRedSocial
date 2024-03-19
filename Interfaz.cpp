@@ -5,45 +5,34 @@ using namespace std;
  
  int main()
  {
-
+ cout<<".-'''-.   ____..--'    .-''-.   _____     __ .-./`)           .---.        ____   ,---------. .-./`) ,---.   .--.   ____    .--.   .--."<<endl;          
+  cout<<"/ _     \\ |        |  .'_ _   \\  \\   _\\   /  /\\ .-.')          | ,_|      .'  __ `.\\          \\ .-.')|    \\  |  | .'  __ `. |  | _/  /"<<endl;            
+ cout<<"(`' )/`--' |   .-'  ' / ( ` )   ' .-./ ). /  ' / `-' \\        ,-./  )     /   '  \\  \\`--.  ,---'/ `-' \\|  ,  \\ |  |/   '  \\  \\| (`' ) /"<<endl;             
+cout<<"(_ o _).    |.-'.'   /. (_ o _)  | \\ '_ .') .'   `-'´`        \\  '_ '`)   |___|  /  |   |   \\    `-'`´`|  |\\_ \\|  ||___|  /  ||(_ ()_)" <<endl;              
+ cout<<"(_,_). '.     /   _/ |  (_,_)___|(_ (_) _) '    .---.          > (_)  )      _.-`   |   :_ _:    .---. |  _( )_\\  |   _.-`   || (_,_)   __" <<endl;          
+cout<<".---.  \\  :  .'._( )_ '  \\   .---.  /    \\   \\  |   |         (  .  .-'   .'   _    |   (_I_)    |   | | (_ o _)  |.'   _    ||  |\\ \\  |  |"<<endl;         
+cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|___ |  _( )_  |  (_(=)_)   |   | |  (_,_)\\  ||  _( )_  ||  | \\ `'   /"<<endl;         
+ cout<<"\\       / |    (_,_)|  \\       /  /  /   \\    \\ |   |           |        \\ (_ o _) /   (_I_)    |   | |  |    |  |\\ (_ o _) /|  |  \\    /"<<endl;          
+  cout<<"`-...-'  |_________|   `'-..-'  '--'     '----''---'           `--------` '.(_,_).'    '---'    '---' '--'    '--' '.(_,_).' `--'   `'-'"<<endl;    
     while(true)
     {
-        //kbhit() es verdadero si se presiona una tecla y falso si no
+
         if(kbhit())
         {
-            // getkey() regresa un código numérico asociado a cada tecla. letras mayúsculas y minúsculas tienen diferentes valores.
+
             int k = getkey();
-            // mostramos el código de la tecla presionada
-            cout << k << endl;
-            if(k == 14)
+         
+            if(k == 1)
             {
-                cout << "tecla arriba"<< endl;
-            }
-            if (k == 15)
-            {
-                cout << "tecla abajo"<< endl;
-            }
-            if(k == 16)
-            {
-                cout << "tecla izquierda"<< endl;
-            }
-            if (k == 17)
-            {
-                cout << "tecla derecha"<< endl;
-            }
-            if (k == 32)
-            {
-                cout << "barra de espacio"<< endl;
-            }
-            if (k == 1)
-            {
-                cout << "tecla enter"<< endl;
+                        system("CLS");
+                cout << "Menu"<< endl;
+         
             }
             if(k == 0)
             {
-                cout << "tecla escape" << endl;
-                // usamos un break cuando queremos salirnos del while y continuar con el código.
+                cout << "Salir" << endl;
                 break;
+
             }
         }
     }
