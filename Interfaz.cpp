@@ -40,14 +40,34 @@ cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|
             }
         }
     }
+    
  cout << "                                                         MENU" << endl;    
  cout<<"1.-VER LISTA DE USUARIOS"<<endl;
  cout<<"2.-VER LISTA DE PUBLICACIONES"<<endl;
  cout<<"3.-ENTRAR A UN PERFIL DE USUARIO"<<endl;
  cout<<"4.-AGREGAR NUEVO USUARIO"<<endl;
  cout<<"5.-SALIR"<<endl;
+ while (true){
  cin>>MenuO;
-
-
+switch (MenuO)
+{
+case 1:
+    cout<<"HAS ELEGIDO VER LA LISTA DE USUARIOS"<<endl;
+     break;
+case 2:
+cout<<"HAS ELEGIDO VER LISTA DE PUBLICACIONES"<<endl;
+ break;
+case 3:
+cout<<"HAS ELEGIDO ENTRAR A UN PERFIL DE USUARIO"<<endl;
+ break;
+case 4: 
+cout<<"HAS ELEGIDO AGREGAR A UN NUEVO USUARIO"<<endl;
+ break;
+case 5: 
+cout<<"ADIOS"<<endl;
  return 0;
+default:
+    cout<<"ELIGE OPCION VALIDA"<<endl;
+}
+    }
  }
