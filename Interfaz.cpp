@@ -3,7 +3,7 @@
 #include <cstdlib> 
 using namespace rlutil;
 using namespace std;
- 
+ int MenuO;
  int main()
  {
  cout<<".-'''-.   ____..--'    .-''-.   _____     __ .-./`)           .---.        ____   ,---------. .-./`) ,---.   .--.   ____    .--.   .--."<<endl;          
@@ -44,6 +44,9 @@ cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|
  cout<<"1.-VER LISTA DE USUARIOS"<<endl;
  cout<<"2.-VER LISTA DE PUBLICACIONES"<<endl;
  cout<<"3.-ENTRAR A UN PERFIL DE USUARIO"<<endl;
+ cout<<"4.-AGREGAR NUEVO USUARIO"<<endl;
+ cout<<"5.-SALIR"<<endl;
+ cin>>MenuO;
 
 
  return 0;
