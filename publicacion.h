@@ -17,6 +17,12 @@ mostrarPublicacion()
         this-> fecha=fecha;
         this-> contenido=contenido;
     }
+  Publicaciones(usuario* usuario,string fecha, string contenido)
+  {
+    this->fecha=fecha;
+    this->ptrusuario=usuario;
+    this ->contenido=contenido;
+  }
 };
 
 
