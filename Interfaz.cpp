@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
-#include "rlutil.h"
+#include <iostream> 
+#include "rlutil.h" 
+#include <cstdlib> 
 using namespace rlutil;
 using namespace std;
  
@@ -14,6 +15,9 @@ cout<<".---.  \\  :  .'._( )_ '  \\   .---.  /    \\   \\  |   |         (  .  .
 cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|___ |  _( )_  |  (_(=)_)   |   | |  (_,_)\\  ||  _( )_  ||  | \\ `'   /"<<endl;         
  cout<<"\\       / |    (_,_)|  \\       /  /  /   \\    \\ |   |           |        \\ (_ o _) /   (_I_)    |   | |  |    |  |\\ (_ o _) /|  |  \\    /"<<endl;          
   cout<<"`-...-'  |_________|   `'-..-'  '--'     '----''---'           `--------` '.(_,_).'    '---'    '---' '--'    '--' '.(_,_).' `--'   `'-'"<<endl;    
+   cout<<endl;
+   cout<<"PRESIONA CUALQUIER TECLA PARA CONTINUAR O ESC PARA SALIR"<<endl;
+   
     while(true)
     {
 
@@ -22,10 +26,10 @@ cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|
 
             int k = getkey();
          
-            if(k == 1)
+            if(k != 0)
             {
-                        system("CLS");
-                cout << "Menu"<< endl;
+                        system("clear");
+                break;
          
             }
             if(k == 0)
@@ -36,8 +40,11 @@ cout<<"\\    `-'  |.'  (_'o._) \\  `-'    /  `-'`-'    \\ |   |          `-'`-'|
             }
         }
     }
+ cout << "                                                         MENU" << endl;    
+ cout<<"1.-VER LISTA DE USUARIOS"<<endl;
+ cout<<"2.-VER LISTA DE PUBLICACIONES"<<endl;
+ cout<<"3.-ENTRAR A UN PERFIL DE USUARIO"<<endl;
 
 
-cout<<"Prueba"<<endl;
-    return 0;
+ return 0;
  }

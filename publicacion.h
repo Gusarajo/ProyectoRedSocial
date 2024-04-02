@@ -1,6 +1,6 @@
 #ifndef publicacion_h
 #define publicacion_h
-#include Usuario.h
+#include "Usuario.h" 
 class Publicaciones
 {
 int id;
