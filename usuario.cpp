@@ -1,6 +1,7 @@
 #include "usuario.h"
 #include "publicacion.h"
-
+#include <cstdlib>
+#include <ctime>
 void Usuario::mostrar() {
     cout << "id: " << getid() << "\n nombre: " << this->nombre << "\n edad: " << this->edad << "\n nacionalidad: " << this->nacionalidad << endl;
 }
@@ -44,7 +45,11 @@ Usuario* Usuario::getAmigo(int id) {
     cout << "no existe un amigo con ese id \n";
     return nullptr;
 }
-
+void Usuario::crearid()
+{
+    srand(time(0));
+    id=rand()%100000;
+}
 Usuario::Usuario(string nombre) {
     this->nombre = nombre;
 }

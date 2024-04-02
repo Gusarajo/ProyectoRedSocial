@@ -9,20 +9,21 @@ using namespace std;
 class RedSocial
 {
 private:
+vector<Usuario*> usuarios;
 vector<Publicacion*>publicaciones;
 public:
 string nombre;
 int NumUsuarios;
 int NumPublicaciones;
-
+//metodos
+void agregarUsuario();
+void mostrarUsuarios();
+void mostrarPublicaciones();
+Usuario* getUsuario();
+//constructores
+Redsocial(string nombre);
+Redsocial(string nombre,vector<usuario*>usuarios);
+Redsocial(string nombre,vector<usuario*>usuarios,vector<publicacion*>publicaciones);
 };
-
-RedSocial::RedSocial(/* args */)
-{
-}
-
-RedSocial::~RedSocial()
-{
-}
 
 #endif

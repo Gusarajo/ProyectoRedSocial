@@ -22,7 +22,7 @@ public:
     int getid() {
         return this->id;
     }
-
+    void crearid();
     void mostrar();
 
     void mostrarAmigos();
