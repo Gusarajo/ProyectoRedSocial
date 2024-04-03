@@ -1,6 +1,10 @@
 #ifndef publicacion_h
 #define publicacion_h
-#include "Usuario.h" 
+#include "Usuario.h"
+#include <iostream>
+#include <string> 
+#include <vector> 
+using namespace std;
 class Publicacion
 {
 int id;

@@ -15,15 +15,13 @@ public:
 string nombre;
 int NumUsuarios;
 int NumPublicaciones;
-//metodos
 void agregarUsuario();
 void mostrarUsuarios();
 void mostrarPublicaciones();
-Usuario* getUsuario();
-//constructores
-Redsocial(string nombre);
-Redsocial(string nombre,vector<usuario*>usuarios);
-Redsocial(string nombre,vector<usuario*>usuarios,vector<publicacion*>publicaciones);
+Usuario* getUsuario(int id);
+RedSocial(string nombre);
+RedSocial(string nombre,vector<Usuario*>usuarios);
+RedSocial(string nombre,vector<Usuario*>usuarios,vector<Publicacion*>publicaciones);
 };
 
 #endif

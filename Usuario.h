@@ -1,10 +1,8 @@
-#ifndef usuario_h
-#define usuario_h
-
+#ifndef Usuario_h
+#define Usuario_h 
 #include <iostream>
 #include <string> 
 #include <vector> 
-#include "publicacion.h"  
 
 using namespace std;
 
@@ -22,7 +20,7 @@ public:
     int getid() {
         return this->id;
     }
-    void crearid();
+    int crearid();
     void mostrar();
 
     void mostrarAmigos();

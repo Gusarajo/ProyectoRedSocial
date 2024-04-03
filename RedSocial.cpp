@@ -1,36 +1,39 @@
 #include "RedSocial.h"
 void RedSocial::agregarUsuario()
 {
-    string nom,nac;
+    string nom, nac;
     int ed;
-    bool seguir=0;
-    cout << "dame tu usuario";
+    bool seguir = false; 
+    cout << "Dame tu usuario: ";
     cin >> nom;
-    cout << "quieres ingresar edad"<<endl;
-    cin>>seguir;
+    cout << "¿Quieres ingresar edad? (1 para sí, 0 para no)" << endl;
+    cin >> seguir;
     if (seguir)
     {
-        cout <<" ingresa tu edad"<<endl;
+        cout << "Ingresa tu edad: ";
         cin >> ed;
-        cout << "quieres ingresar una nacionalidad"<<endl;
-        cin>> seguir;
+        cout << "¿Quieres ingresar una nacionalidad? (1 para sí, 0 para no)" << endl;
+        cin >> seguir;
         if (seguir)
         {
-            cout << "ingresa tu nacionalidad"<<endl;
-            cin>> nac;
-            Usuario newUs(nom,ed,nac);
+            cout << "Ingresa tu nacionalidad: ";
+            cin >> nac;
+            Usuario* newUs = new Usuario(nom, ed, nac); 
+            this->usuarios.push_back(newUs);
         }
         else
         {
-        Usuario newUs(nom,ed);
+            Usuario* newUs = new Usuario(nom, ed); 
+            this->usuarios.push_back(newUs);
         }
     }
-    else{
-    Usuario newUs(nom);
+    else
+    {
+        Usuario* newUs = new Usuario(nom); 
+        this->usuarios.push_back(newUs);
     }
-    this->usuarios.push_back(newUs);
-
 }
+
 void RedSocial::mostrarUsuarios()
 {
 for (int i = 0; i < this->usuarios.size(); i++) 
@@ -39,39 +42,40 @@ for (int i = 0; i < this->usuarios.size(); i++)
         usuarios[i]->mostrar();  
     }
 }
-void RedSocial::mostrarPublicaciones();
+void RedSocial::mostrarPublicaciones()
 {
     for (int i = 0; i < this->usuarios.size(); i++) 
     {
         cout << i + 1 << ".- "<<usuarios[i]->nombre<<endl;
 
-        usuarios[i]->mostrarPublicaciones();  
+       usuarios[i]->mostrarPublicaciones();  
     }
 
 }
 Usuario* RedSocial::getUsuario(int id)
 {
-for(int i = 0; i < this->usuarios.size(); i++) {
-        if(this->usuarios[i]->id == id) {
+for(int i = 0; i < this->usuarios.size(); i++) 
+{
+        if(this->usuarios[i]->getid() == id) {
             return usuarios[i];
         }
     }
     cout << "no existe un usuario con ese id \n";
     return nullptr;
 }
-//constructores
-RedSocial::Redsocial(string nombre)
+
+RedSocial::RedSocial( string nombre)
 {
 this->nombre=nombre;
 }
-RedSocial::Redsocial(string nombre,vector<usuario*>usuarios)
+RedSocial::RedSocial(string nombre,vector<Usuario*>usuarios)
 {
 this->nombre=nombre;
-this->usuarios.push_back(usuarios);
+this->usuarios=usuarios;
 }
-RedSocial::Redsocial(string nombre,vector<usuario*>usuarios,vector<publicacion*>publicaciones)
+RedSocial::RedSocial(string nombre,vector<Usuario*>usuarios,vector<Publicacion*>publicaciones)
 {
 this->nombre=nombre;
-this->usuarios.push_back(usuarios);
-this->publicaciones.push_back(publicaciones);
+this->usuarios=usuarios;
+this->publicaciones=publicaciones;
 }
