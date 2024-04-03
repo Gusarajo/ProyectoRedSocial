@@ -46,11 +46,24 @@ void RedSocial::mostrarPublicaciones()
 {
     for (int i = 0; i < this->usuarios.size(); i++) 
     {
+        if(usuarios[i]->publicaciones.size()>0){
         cout << i + 1 << ".- "<<usuarios[i]->nombre<<endl;
 
        usuarios[i]->mostrarPublicaciones();  
+        }
     }
 
+}
+void RedSocial::mostrarBusquedas()
+{
+    for (int i = 0; i < this->usuarios.size(); i++) 
+    {
+        if(usuarios[i]->publicacionesA.size()>0){
+        cout << i + 1 << ".- "<<usuarios[i]->nombre<<endl;
+
+       usuarios[i]->mostrasBusquedaA();  
+        }
+    }
 }
 Usuario* RedSocial::getUsuario(int id)
 {

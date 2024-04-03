@@ -7,7 +7,7 @@
 using namespace std;
 
 class Publicacion;
-
+class BuscaAmigos;
 class Usuario {
     int id;
 public: 
@@ -16,6 +16,7 @@ public:
     string nacionalidad;
     vector <Usuario*> amigos;
     vector <Publicacion*> publicaciones;
+    vector<BuscaAmigos*>publicacionesA;
 
     int getid() {
         return this->id;
@@ -26,10 +27,12 @@ public:
     void mostrarAmigos();
 
     void mostrarPublicaciones();
+    void mostrasBusquedaA();
 
     void agregarAmigo(Usuario* nuevoAmigo);
 
     void crearPublicacion();
+    void buscarAmigos();
 
     Usuario* getAmigo(int id);
 

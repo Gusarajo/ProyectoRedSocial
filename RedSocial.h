@@ -11,6 +11,7 @@ class RedSocial
 private:
 vector<Usuario*> usuarios;
 vector<Publicacion*>publicaciones;
+vector<BuscaAmigos*>BusquedasAmigos;
 public:
 string nombre;
 int NumUsuarios;
@@ -18,6 +19,7 @@ int NumPublicaciones;
 void agregarUsuario();
 void mostrarUsuarios();
 void mostrarPublicaciones();
+void mostrarBusquedas();
 Usuario* getUsuario(int id);
 RedSocial(string nombre);
 RedSocial(string nombre,vector<Usuario*>usuarios);

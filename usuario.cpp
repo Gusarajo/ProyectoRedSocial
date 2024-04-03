@@ -19,23 +19,41 @@ void Usuario::mostrarPublicaciones() {
         publicaciones[i]->mostrarPublicacion();  
     }
 }
-
+void Usuario::mostrasBusquedaA()
+{
+     for (int i = 0; i < this->publicacionesA.size(); i++) {
+        cout << i + 1 << ".- ";
+        publicacionesA[i]->mostrarPublicacionA();  
+    }
+}
 void Usuario::agregarAmigo(Usuario* nuevoAmigo) {
     this->amigos.push_back(nuevoAmigo);
     nuevoAmigo->amigos.push_back(this);
 }
 
 void Usuario::crearPublicacion() {
-    Publicacion newPub;
-    cout<< "Estas creando una publicacion"<<endl;
-    newPub.ptrusuario = this;
-    cout << "cual es la fecha \n";
-    cin >> newPub.fecha;
-    cout << "cual es el contenido de la publicacion (sin espacios)\n";
-    cin >> newPub.contenido;
-    this->publicaciones.push_back(&newPub); 
+     Publicacion* newPub = new Publicacion(); 
+    cout << "Estás creando una publicación" << endl;
+    newPub->ptrusuario = this;
+    cout << "¿Cuál es la fecha?" << endl;
+    cin >> newPub->fecha;
+    cout << "¿Cuál es el contenido de la publicación?" << endl;
+    cout << "NOTA: No uses espacios" << endl;
+    cin >> newPub->contenido;
+    this->publicaciones.push_back(newPub);
 }
-
+void Usuario::buscarAmigos()
+{
+BuscaAmigos* newami= new BuscaAmigos();
+ cout << "Estás buscando amigos" << endl;
+    newami->ptrusuario = this;
+    cout << "¿Cuál es la fecha?" << endl;
+    cin >> newami->fecha;
+     cout << "¿Cuál es el contenido de la publicación?" << endl;
+    cout << "NOTA: No uses espacios" << endl;
+   cin>> newami->contenido;
+    this->publicacionesA.push_back(newami);
+}
 Usuario* Usuario::getAmigo(int id) {
     for(int i = 0; i < this->amigos.size(); i++) {
         if(this->amigos[i]->id == id) {

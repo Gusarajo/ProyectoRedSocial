@@ -26,5 +26,13 @@ Publicacion(Usuario* usuario, string fecha, string contenido)
         this->ptrusuario=nullptr;
     }
 };
-
+class BuscaAmigos: public Publicacion
+{
+    public:
+    void mostrarPublicacionA()
+    {
+       Publicacion::mostrarPublicacion();
+       cout<<"Busco amigos, mi id es:"<<ptrusuario->getid()<<endl;
+    }
+};
 #endif
